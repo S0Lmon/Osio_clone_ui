@@ -1,0 +1,82 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #060D10;
+  color: #FFFFFF;
+  user-select: none;
+}
+
+/* ===== PALETTE VARIABLES (THEME CÔNG NGHỆ) ===== */
+:root {
+  /* Color Tokens from Provided Palette */
+  --c-bg-dark: #060D10;
+  --c-primary-teal: #21A691;
+  --c-accent-lime: #87DF2C;
+  --c-slate-surface: #27403E;
+  --c-silver-muted: #B4B4B2;
+  --c-white: #FFFFFF;
+
+  /* Glassmorphism Surface Tokens */
+  --glass-bg: rgba(39, 64, 62, 0.42);
+  --glass-bg-subtle: rgba(39, 64, 62, 0.25);
+  --glass-bg-dense: rgba(18, 33, 35, 0.78);
+  --glass-border: rgba(33, 166, 145, 0.22);
+  --glass-border-light: rgba(255, 255, 255, 0.14);
+  --glass-border-glow: rgba(135, 223, 44, 0.4);
+  
+  --glass-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+  --teal-glow: 0 0 25px rgba(33, 166, 145, 0.25);
+  --lime-glow: 0 0 20px rgba(135, 223, 44, 0.35);
+
+  --blur: blur(24px) saturate(180%);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  
+  --text-muted: #B4B4B2;
+  --text-dim: #758a88;
+}
+
+/* ===== TECH STUDIO BACKGROUND ===== */
+body {
+  background: radial-gradient(
+    ellipse 90% 80% at 50% 42%,
+    #27403E 0%,
+    #152827 35%,
+    #0c191c 65%,
+    #060D10 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}

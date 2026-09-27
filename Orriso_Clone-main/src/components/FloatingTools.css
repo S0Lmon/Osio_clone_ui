@@ -1,0 +1,171 @@
+/* Unified Floating Toolbar Dock on top of Center Card */
+.floating-tools-dock,
+.typography-floating-wrapper {
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 25;
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+.typography-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 33, 35, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  border-radius: 999px;
+  padding: 5px 14px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(33, 166, 145, 0.15);
+  flex-shrink: 0;
+}
+
+.typography-pill .type-icon {
+  font-weight: 700;
+  font-size: 13px;
+  color: #87DF2C;
+}
+
+.typography-pill .type-label {
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+}
+
+.typography-pill .type-shortcut {
+  background: rgba(33, 166, 145, 0.25);
+  border: 1px solid rgba(33, 166, 145, 0.35);
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 10px;
+  color: #87DF2C;
+  font-weight: 600;
+}
+
+.floating-connector-dot {
+  display: none;
+}
+
+.canvas-tool-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(18, 33, 35, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  border-radius: 999px;
+  padding: 3px 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  flex-shrink: 0;
+}
+
+.canvas-tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: #B4B4B2;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.18s ease;
+}
+
+.canvas-tool-btn:hover {
+  background: rgba(33, 166, 145, 0.2);
+  color: #FFFFFF;
+}
+
+.canvas-tool-btn .shortcut-badge {
+  background: rgba(39, 64, 62, 0.6);
+  border: 1px solid rgba(33, 166, 145, 0.25);
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-size: 9px;
+  color: #21A691;
+  font-weight: 600;
+}
+
+.canvas-tool-center-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(33, 166, 145, 0.2);
+  border: 1px solid rgba(33, 166, 145, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #87DF2C;
+  transition: all 0.18s ease;
+}
+
+.canvas-tool-center-btn:hover {
+  background: rgba(135, 223, 44, 0.25);
+  border-color: #87DF2C;
+  box-shadow: 0 0 10px rgba(135, 223, 44, 0.4);
+}
+
+/* Zoom History Floating Capsule */
+.zoom-history-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 33, 35, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  border-radius: 999px;
+  padding: 5px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  flex-shrink: 0;
+}
+
+/* Standalone modifier when placed top-right outside the dock */
+.zoom-history-capsule.standalone-top-right {
+  position: absolute;
+  top: 106px;
+  right: 28px;
+  z-index: 20;
+}
+
+.zh-btn {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B4B4B2;
+  border-radius: 50%;
+  transition: all 0.15s ease;
+}
+
+.zh-btn:hover {
+  color: #87DF2C;
+  background: rgba(33, 166, 145, 0.2);
+}
+
+.zoom-percentage {
+  font-size: 11px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 4px;
+}
+
+.zh-divider {
+  width: 1px;
+  height: 14px;
+  background: rgba(33, 166, 145, 0.3);
+  margin: 0 2px;
+}

@@ -1,0 +1,257 @@
+.bottom-toolset-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 28px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.bottom-toolset-container > * {
+  pointer-events: auto;
+}
+
+/* =======================================
+   1. AI AGENT PANEL (LEFT)
+======================================= */
+.ai-agent-panel {
+  position: relative;
+  background: rgba(18, 33, 35, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  border-radius: 24px;
+  padding: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 0 20px rgba(33, 166, 145, 0.12);
+}
+
+.agent-tab-bubble {
+  position: absolute;
+  top: -24px;
+  left: 20px;
+  background: rgba(39, 64, 62, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  padding: 4px 14px 2px 14px;
+  font-size: 11px;
+  color: #87DF2C;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.ai-agent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 90px);
+  grid-template-rows: repeat(2, 44px);
+  gap: 8px;
+}
+
+.agent-tile {
+  border-radius: 14px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.agent-tile:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.12);
+}
+
+.agent-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Gradients with Technological Palette */
+.tile-storyboarder {
+  background: linear-gradient(135deg, #87DF2C 0%, #27403E 100%);
+  border: 1px solid rgba(135, 223, 44, 0.4);
+}
+
+.tile-optimizer {
+  background: linear-gradient(135deg, #21A691 0%, #060D10 100%);
+  border: 1px solid rgba(33, 166, 145, 0.45);
+}
+
+.tile-visualizer {
+  background: linear-gradient(135deg, #B4B4B2 0%, #27403E 100%);
+  border: 1px solid rgba(180, 180, 178, 0.35);
+}
+
+.tile-copywriter {
+  background: linear-gradient(135deg, #21A691 0%, #87DF2C 100%);
+  border: 1px solid rgba(135, 223, 44, 0.5);
+}
+
+.tile-copywriter .agent-name {
+  color: #060D10;
+  text-shadow: none;
+  font-weight: 700;
+}
+
+/* =======================================
+   2. FILES VIREEL PANEL (RIGHT)
+======================================= */
+.files-vireel-panel {
+  position: relative;
+  background: rgba(18, 33, 35, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  border-radius: 24px;
+  padding: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 0 20px rgba(33, 166, 145, 0.12);
+}
+
+.files-tab-bubble {
+  position: absolute;
+  top: -24px;
+  left: 20px;
+  background: rgba(39, 64, 62, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  padding: 4px 14px 2px 14px;
+  font-size: 11px;
+  color: #87DF2C;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.files-cards-row {
+  display: flex;
+  gap: 10px;
+}
+
+.file-widget-card {
+  width: 90px;
+  height: 96px;
+  background: rgba(39, 64, 62, 0.45);
+  border: 1px solid rgba(33, 166, 145, 0.22);
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-widget-card:hover {
+  transform: translateY(-2px);
+  background: rgba(39, 64, 62, 0.8);
+  border-color: #87DF2C;
+  box-shadow: 0 8px 20px rgba(33, 166, 145, 0.35);
+}
+
+/* 3D Layered Document Stack Icon */
+.file-doc-stack-icon {
+  position: relative;
+  width: 38px;
+  height: 44px;
+  margin: 2px auto 0 auto;
+}
+
+.doc-sheet {
+  position: absolute;
+  width: 28px;
+  height: 36px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.sheet-3 {
+  top: 0;
+  left: 2px;
+  transform: rotate(-10deg);
+  background: #27403E;
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  opacity: 0.7;
+}
+
+.sheet-2 {
+  top: 1px;
+  left: 7px;
+  transform: rotate(6deg);
+  background: #B4B4B2;
+  opacity: 0.85;
+}
+
+.sheet-1 {
+  top: 4px;
+  left: 4px;
+  background: #FFFFFF;
+  padding: 4px 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.doc-line {
+  height: 2px;
+  background: #21A691;
+  border-radius: 1px;
+  width: 100%;
+}
+
+.line-short { width: 60%; }
+.line-mid { width: 45%; }
+
+/* Recent Thumbnail */
+.file-recent-thumb {
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #060D10;
+  border: 1px solid rgba(33, 166, 145, 0.25);
+}
+
+.file-recent-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* File Meta */
+.file-meta {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.file-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.file-count {
+  font-size: 9.5px;
+  color: #B4B4B2;
+  font-weight: 400;
+}

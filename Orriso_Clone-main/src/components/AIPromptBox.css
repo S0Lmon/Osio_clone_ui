@@ -1,0 +1,223 @@
+.ai-prompt-box {
+  position: relative;
+  width: 560px;
+  margin-top: 14px;
+  background: rgba(18, 33, 35, 0.88);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(33, 166, 145, 0.35);
+  border-radius: 24px;
+  padding: 14px 18px 12px 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(33, 166, 145, 0.15);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.ai-prompt-box:hover {
+  border-color: rgba(135, 223, 44, 0.5);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(33, 166, 145, 0.25);
+}
+
+/* Attachments Top Row */
+.prompt-attachments-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.attachment-thumb {
+  width: 54px;
+  height: 38px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  background: rgba(6, 13, 16, 0.5);
+}
+
+.attachment-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.add-attachment-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(39, 64, 62, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 300;
+  border: 1px solid rgba(33, 166, 145, 0.3);
+  transition: all 0.15s ease;
+}
+
+.add-attachment-btn:hover {
+  background: rgba(33, 166, 145, 0.3);
+  border-color: #87DF2C;
+  color: #87DF2C;
+  transform: scale(1.05);
+}
+
+/* Prompt Text Area */
+.prompt-text-area {
+  min-height: 44px;
+}
+
+.prompt-content-text {
+  color: #FFFFFF;
+  font-size: 11.5px;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: #87DF2C;
+  font-weight: 700;
+  animation: cursorBlink 1s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Actions Bottom Row */
+.prompt-actions-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.prompt-left-tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.prompt-circle-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(39, 64, 62, 0.5);
+  border: 1px solid rgba(33, 166, 145, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B4B4B2;
+  transition: all 0.15s ease;
+}
+
+.prompt-circle-btn:hover {
+  background: rgba(33, 166, 145, 0.25);
+  border-color: #21A691;
+  color: #FFFFFF;
+}
+
+.prompt-circle-btn.sparkle-btn {
+  background: rgba(135, 223, 44, 0.2);
+  border-color: rgba(135, 223, 44, 0.45);
+  color: #87DF2C;
+  box-shadow: 0 0 10px rgba(135, 223, 44, 0.25);
+}
+
+.prompt-media-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(39, 64, 62, 0.45);
+  border: 1px solid rgba(33, 166, 145, 0.22);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #B4B4B2;
+  transition: all 0.15s ease;
+}
+
+.prompt-media-pill.active {
+  background: rgba(33, 166, 145, 0.3);
+  color: #FFFFFF;
+  border-color: rgba(135, 223, 44, 0.5);
+  box-shadow: 0 0 10px rgba(33, 166, 145, 0.2);
+}
+
+.prompt-media-pill:hover {
+  background: rgba(33, 166, 145, 0.25);
+  color: #FFFFFF;
+}
+
+.prompt-right-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prompt-voice-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(39, 64, 62, 0.5);
+  border: 1px solid rgba(33, 166, 145, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B4B4B2;
+  transition: all 0.15s ease;
+}
+
+.prompt-voice-btn:hover {
+  background: rgba(33, 166, 145, 0.25);
+  border-color: #87DF2C;
+  color: #87DF2C;
+}
+
+.prompt-submit-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #87DF2C 0%, #21A691 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #060D10;
+  box-shadow: 0 4px 14px rgba(135, 223, 44, 0.4);
+  transition: all 0.18s ease;
+}
+
+.prompt-submit-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(135, 223, 44, 0.6);
+  filter: brightness(1.1);
+}
+
+/* Glowing tech accent line */
+.prompt-rainbow-line {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    #21A691 0%,
+    #87DF2C 50%,
+    #21A691 100%
+  );
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(135, 223, 44, 0.6);
+}
